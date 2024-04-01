@@ -1,10 +1,9 @@
 
 class Tarefa{
-    constructor(descricao,prioridade){
+    constructor(descricao){
         this.descricao = descricao;
         this.completa = false;
         this.dataCriacao = new Date();
-        this.prioridade = prioridade; 
     }
 
     marcarCompleta(){
@@ -18,10 +17,6 @@ class Tarefa{
     editarDescricao(descricao){
         this.descricao = descricao;
     }
-
-    definirPrioridade(prioridade){
-        this.prioridade = prioridade;
-    }
 }
 
 class GerenciadorDeTarefas{
@@ -29,8 +24,8 @@ class GerenciadorDeTarefas{
         this.tarefas = [];   
     }
 
-    adicionarTarefa(descricao,prioridade){
-        const tarefa = new Tarefa(descricao,prioridade);  
+    adicionarTarefa(descricao){
+        const tarefa = new Tarefa(descricao);  
         this.tarefas.push(tarefa); 
     }
 
@@ -60,31 +55,13 @@ class GerenciadorDeTarefas{
             .filter(tarefa => !tarefa.completa)
             .map((tarefa, index) => console.log(`${index + 1}: ${tarefa.descricao} - Pendente`));
     }
-
-    listarTarefaPrioridadeAlta(){
-        this.tarefas
-        .filter(function(tarefa,index){
-            if (tarefa.prioridade = 'alta')
-            console.log(`${index + 1}: ${tarefa.descricao} - ${tarefa.prioridade} - ${tarefa.completa}`);
-        })
-    }
-
-    listarTarefaPrioridadeMedia(){
-        this.tarefas
-        .filter(function(tarefa,index){
-            if (tarefa.prioridade = 'media')
-            console.log(`${index + 1}: ${tarefa.descricao} - ${tarefa.prioridade} - ${tarefa.completa}`);
-        })
-    }
-
-    listarTarefaPrioridadeBaixa(){
-        this.tarefas
-        .filter(function(tarefa,index){
-            if (tarefa.prioridade = 'baixa')
-            console.log(`${index + 1}: ${tarefa.descricao} - ${tarefa.prioridade} - ${tarefa.completa}`)
-        });
-    }
 }
+
+
+
+
+
+
 
 
 
