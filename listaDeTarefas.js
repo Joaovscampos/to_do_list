@@ -4,6 +4,7 @@ class Tarefa{
         this.descricao = descricao;
         this.completa = false;
         this.dataCriacao = new Date();
+        this.prioridade = 'baixa';
     }
 
     marcarCompleta(){
@@ -16,6 +17,10 @@ class Tarefa{
 
     editarDescricao(descricao){
         this.descricao = descricao;
+    }
+
+    editarPrioridade(prioridade){
+        this.prioridade = prioridade;
     }
 }
 
@@ -55,8 +60,16 @@ class GerenciadorDeTarefas{
             .filter(tarefa => !tarefa.completa)
             .map((tarefa, index) => console.log(`${index + 1}: ${tarefa.descricao} - Pendente`));
     }
-}
 
+    listarTarefaPorPrioridade(prioridade){
+        this.tarefas
+        .filter(function(tarefa){
+           return tarefa.prioridade === prioridade;
+        }).map(function(tarefa,index){
+            console.log(`${index + 1}: ${tarefa.descricao} - prioridade: ${tarefa.prioridade}`);
+        });
+    }
+}
 
 
 
