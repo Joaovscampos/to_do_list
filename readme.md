@@ -9,6 +9,8 @@ Este é um MVP (Minimum Viable Product) de uma aplicação de lista de tarefas s
 - Marcar tarefas como completas
 - Remover tarefas
 - Listar tarefas por status 
+- Adicionar prioridade para as tarefas 
+- Listar tarefas por prioridade 
 
 ## Tecnologias Utilizadas
 
