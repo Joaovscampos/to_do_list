@@ -62,15 +62,26 @@ class GerenciadorDeTarefas{
     }
 
     listarTarefaPorPrioridade(prioridade){
-        this.tarefas
-        .filter(function(tarefa){
-           return tarefa.prioridade === prioridade;
-        }).map(function(tarefa,index){
-            console.log(`${index + 1}: ${tarefa.descricao} - prioridade: ${tarefa.prioridade}`);
-        });
-    }
-}
+        if(prioridade !== 'media' && prioridade !== 'baixa' && prioridade !== 'alta'){
+            console.log(`${prioridade} é invalida, as prioridades só podem ser: "baixa", "media" e "alta"`);
+            return; 
+        }
 
+        const tarefaPorPrioridade = this.tarefas.filter(function(tarefa){
+           return tarefa.prioridade === prioridade; 
+        })
+
+        if(tarefaPorPrioridade.length === 0){
+            console.log(`Não existem tarefas com a prioridade: ${prioridade}`);
+            return; 
+        }
+
+        tarefaPorPrioridade.forEach(function(tarefa,index){
+            console.log(`${index + 1}: ${tarefa.descricao} - prioridade: ${tarefa.prioridade}`);
+        })       
+    }       
+
+}         
 
 
 
