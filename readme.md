@@ -1,6 +1,6 @@
 # To-Do List MVP
 
-Este é um MVP (Minimum Viable Product) de uma aplicação de lista de tarefas simples, desenvolvida utilizando JavaScript e voltada para o servidor(backend). Utilizei conceitos de classe e metodos de arrays para construção da aplicação.
+ Uma aplicação de lista de tarefas simples, desenvolvida utilizando JavaScript e voltada para o servidor(backend). Utilizei conceitos de classe e metodos de arrays para construção da aplicação.
 
 ## Funcionalidades
 
@@ -15,6 +15,10 @@ Este é um MVP (Minimum Viable Product) de uma aplicação de lista de tarefas s
 ## Tecnologias Utilizadas
 
 - JavaScript: Linguagem de programação utilizada para desenvolver a lógica da aplicação.
+
+## Contato para falar sobre e ajudar na utilização
+
+- Email: jvitor.scampos@outlook.com
 
 ## Instalação
 
