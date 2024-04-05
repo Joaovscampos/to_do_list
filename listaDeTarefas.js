@@ -67,26 +67,21 @@ class GerenciadorDeTarefas{
             return; 
         }
 
-        const tarefaPorPrioridade = this.tarefas.filter(function(tarefa){
-           return tarefa.prioridade === prioridade; 
-        })
+        const tarefaPorPrioridade = this.tarefas.filter((tarefa) => tarefa.prioridade === prioridade);
+        
 
         if(tarefaPorPrioridade.length === 0){
             console.log(`Não existem tarefas com a prioridade: ${prioridade}`);
             return; 
         }
 
-        tarefaPorPrioridade.forEach(function(tarefa,index){
-            console.log(`${index + 1}: ${tarefa.descricao} - prioridade: ${tarefa.prioridade}`);
-        })       
+        tarefaPorPrioridade.forEach((tarefa,index) => console.log(`${index + 1}: ${tarefa.descricao} - prioridade: ${tarefa.prioridade}`));       
     }       
 
 }         
 
-
-
+ 
     
-
 
 
 
