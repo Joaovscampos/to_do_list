@@ -19,7 +19,7 @@ class Tarefa{
         this.descricao = descricao;
     }
 
-    editarPrioridade(prioridade){
+    editarPrioridade(prioridade){   
         this.prioridade = prioridade;
     }
 }
@@ -45,20 +45,20 @@ class GerenciadorDeTarefas{
     listarTarefas() {
         this.tarefas
             .forEach((tarefa, index) => {
-                console.log(`${index + 1}: ${tarefa.descricao} - ${tarefa.completa ? 'Completa' : 'Pendente'} - Criada em ${tarefa.dataCriacao.toLocaleDateString()}`);
+                console.log(`${index + 1}: ${tarefa.descricao} - ${tarefa.completa ? 'Completa' : 'Pendente'} - Criada em ${tarefa.dataCriacao.toLocaleDateString()} - Prioridade: ${tarefa.prioridade}`);
         });
     }
 
     listarTarefasCompletas(){
         this.tarefas
             .filter(tarefa => tarefa.completa)
-            .map((tarefa, index) => console.log(`${index + 1}: ${tarefa.descricao} - Completa`));
+            .forEach((tarefa, index) => console.log(`${index + 1}: ${tarefa.descricao} - Completa`));
     }
 
     listarTarefasPendentes(){
         this.tarefas
             .filter(tarefa => !tarefa.completa)
-            .map((tarefa, index) => console.log(`${index + 1}: ${tarefa.descricao} - Pendente`));
+            .forEach((tarefa, index) => console.log(`${index + 1}: ${tarefa.descricao} - Pendente `));
     }
 
     listarTarefaPorPrioridade(prioridade){
@@ -85,6 +85,7 @@ class GerenciadorDeTarefas{
 
 
 
+    
 
 
 
